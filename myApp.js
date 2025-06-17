@@ -3,7 +3,7 @@ let app = express();
 console.log("Hello World");
 
 app.get('/',(req,res)=> {
-  res.sendFile(this.path.join(__dirname +'/views/index.html'));
+  res.sendFile(this.path.join(__dirname +"views","index.html"));
 });
 
 
