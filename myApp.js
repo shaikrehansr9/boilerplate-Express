@@ -7,3 +7,4 @@ app.get('/', (req, res) => {
   const absolutePath = path.join(__dirname, 'views', 'index.html'); // Calculate the absolute path
   res.sendFile(absolutePath); // Send the file as a response
 });
+module.exports = app;
