@@ -1,10 +1,10 @@
 const express = require('express');
-const app = express();
-const path = require('path'); // Required to work with file paths
+const app = express.Router();
+const path = require('path'); 
 
-
+app.use('/public',express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
-  const absolutePath = path.join(__dirname, 'views', 'index.html'); // Calculate the absolute path
-  res.sendFile(absolutePath); // Send the file as a response
+   // Calculate the absolute path
+  res.sendFile(path.join(__dirname,'public','index.html')); // Send the file as a response
 });
 module.exports = app;
