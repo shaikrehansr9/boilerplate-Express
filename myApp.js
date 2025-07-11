@@ -14,6 +14,6 @@ app.get('/json',(req,res)=>{
   if(process.env.MESSAGE_STYLE==='uppercase'){
     msg=msg.toUpperCase();
   }
-  res.json({"message": msg})
+  res.json({msg})
 })
 module.exports = app;
